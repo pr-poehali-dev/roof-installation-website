@@ -493,19 +493,6 @@ function SectionHome({
               >
                 Рассчитать стоимость
               </button>
-              /*
-              <button
-                onClick={() => setTab("works")}
-                className="px-8 py-4 rounded-xl font-display font-semibold text-lg transition-all hover:scale-105"
-                style={{
-                  background: "rgba(255,255,255,0.1)",
-                  border: "1px solid rgba(255,255,255,0.3)",
-                  color: "white",
-                }}
-              >
-                Наши работы
-              </button>
-              */
             </div>
           </div>
         </div>
@@ -1842,6 +1829,16 @@ export default function Index() {
                   <Icon name="MapPin" size={14} style={{ color: "#f5a461" }} />{" "}
                   Архангельск и Архангельская область
                 </div>
+                <a
+                  href="https://vk.com/krovlya_severa"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 transition-opacity hover:opacity-80"
+                  style={{ color: "rgba(253,246,237,0.7)" }}
+                >
+                  <Icon name="Users" size={14} style={{ color: "#f5a461" }} />{" "}
+                  ВКонтакте
+                </a>
               </div>
             </div>
             <div>
