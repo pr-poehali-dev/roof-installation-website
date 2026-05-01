@@ -493,7 +493,7 @@ function SectionHome({
               >
                 Рассчитать стоимость
               </button>
-
+              /*
               <button
                 onClick={() => setTab("works")}
                 className="px-8 py-4 rounded-xl font-display font-semibold text-lg transition-all hover:scale-105"
@@ -505,6 +505,7 @@ function SectionHome({
               >
                 Наши работы
               </button>
+              */
             </div>
           </div>
         </div>
@@ -523,7 +524,7 @@ function SectionHome({
                 ["5+", "лет опыта"],
                 ["100+", "объектов"],
                 ["10 лет", "гарантия"],
-                ["24ч", "выезд на замер"],
+                ["24 ч", "выезд на замер"],
               ].map(([num, label]) => (
                 <div key={label}>
                   <div
