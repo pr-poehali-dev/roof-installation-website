@@ -1689,20 +1689,13 @@ export default function Index() {
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
           <button
             onClick={() => setTab("home")}
-            className="flex items-center gap-3"
+            className="flex items-center"
           >
-            <div
-              className="w-9 h-9 rounded-xl flex items-center justify-center"
-              style={{ background: "var(--orange-main)" }}
-            >
-              <Icon name="Home" size={18} style={{ color: "white" }} />
-            </div>
-            <span
-              className="font-display text-xl font-bold"
-              style={{ color: "var(--brown-dark)" }}
-            >
-              Кровля Севера
-            </span>
+            <img
+              src="https://cdn.poehali.dev/projects/5dda9653-ee6b-4f38-8c2f-eebc2ff4c56f/bucket/7ebd1bde-ec3a-4b72-8a3b-b86b3ac7411d.jpeg"
+              alt="Кровля Севера"
+              className="h-12 w-auto object-contain"
+            />
           </button>
 
           {/* Desktop */}
