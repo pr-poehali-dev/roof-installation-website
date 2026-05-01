@@ -867,6 +867,78 @@ function SectionAbout() {
             ))}
           </div>
         </div>
+
+        {/* Privacy Policy */}
+        <div
+          className="mt-16 rounded-2xl p-8"
+          style={{
+            background: "white",
+            border: "1px solid rgba(196,90,26,0.1)",
+            boxShadow: "0 4px 16px rgba(122,62,20,0.06)",
+          }}
+        >
+          <div className="flex items-center gap-3 mb-6">
+            <div
+              className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
+              style={{ background: "rgba(196,90,26,0.1)" }}
+            >
+              <Icon name="ShieldCheck" size={20} style={{ color: "var(--orange-main)" }} />
+            </div>
+            <h3
+              className="font-display text-2xl font-bold"
+              style={{ color: "var(--brown-dark)" }}
+            >
+              Политика конфиденциальности
+            </h3>
+          </div>
+
+          <div className="space-y-5 font-body text-sm leading-relaxed" style={{ color: "#6b4c34" }}>
+            <div>
+              <h4 className="font-display font-semibold mb-1" style={{ color: "var(--brown-dark)" }}>1. Общие положения</h4>
+              <p>Настоящая политика конфиденциальности описывает, как ООО «Кровля Севера» (далее — «Компания») собирает, использует и защищает персональные данные пользователей сайта. Используя сайт, вы соглашаетесь с условиями данной политики.</p>
+            </div>
+
+            <div>
+              <h4 className="font-display font-semibold mb-1" style={{ color: "var(--brown-dark)" }}>2. Какие данные мы собираем</h4>
+              <p>При заполнении заявки на сайте мы собираем следующие персональные данные: имя, номер телефона, а также комментарий (при наличии). Данные передаются добровольно при отправке формы обратной связи.</p>
+            </div>
+
+            <div>
+              <h4 className="font-display font-semibold mb-1" style={{ color: "var(--brown-dark)" }}>3. Цели обработки данных</h4>
+              <p>Собранные данные используются исключительно для связи с вами по вашему запросу: уточнения деталей заявки, согласования замера и предоставления коммерческого предложения. Мы не используем ваши данные в маркетинговых целях без вашего явного согласия.</p>
+            </div>
+
+            <div>
+              <h4 className="font-display font-semibold mb-1" style={{ color: "var(--brown-dark)" }}>4. Хранение и защита данных</h4>
+              <p>Ваши данные хранятся на защищённых серверах и не передаются третьим лицам, за исключением случаев, предусмотренных законодательством РФ. Срок хранения данных — не более 3 лет с момента последнего обращения.</p>
+            </div>
+
+            <div>
+              <h4 className="font-display font-semibold mb-1" style={{ color: "var(--brown-dark)" }}>5. Права пользователя</h4>
+              <p>Вы вправе в любое время запросить удаление своих персональных данных, а также получить информацию о том, какие данные о вас хранятся. Для этого обратитесь к нам по телефону <span style={{ color: "var(--orange-main)" }}>+7 (960) 007-99-05</span> или по email <span style={{ color: "var(--orange-main)" }}>krovlya.severa@gmail.com</span>.</p>
+            </div>
+
+            <div>
+              <h4 className="font-display font-semibold mb-1" style={{ color: "var(--brown-dark)" }}>6. Cookies</h4>
+              <p>Сайт использует технологию cookies для корректной работы и улучшения пользовательского опыта. Вы можете отключить cookies в настройках браузера, однако это может повлиять на работу некоторых функций сайта.</p>
+            </div>
+
+            <div>
+              <h4 className="font-display font-semibold mb-1" style={{ color: "var(--brown-dark)" }}>7. Изменения политики</h4>
+              <p>Компания оставляет за собой право вносить изменения в данную политику. Актуальная версия всегда доступна на сайте в разделе «О компании».</p>
+            </div>
+
+            <p
+              className="pt-4 text-xs"
+              style={{
+                color: "#9a7a62",
+                borderTop: "1px solid rgba(196,90,26,0.1)",
+              }}
+            >
+              Последнее обновление: май 2026 г. По всем вопросам обращайтесь: krovlya.severa@gmail.com
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );
