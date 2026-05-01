@@ -409,7 +409,7 @@ function SectionAbout() {
             </div>
           </div>
           <div>
-            <h3 className="font-display text-3xl font-bold mb-5" style={{ color: "var(--brown-dark)" }}>КровМастер — ваш надёжный партнёр</h3>
+            <h3 className="font-display text-3xl font-bold mb-5" style={{ color: "var(--brown-dark)" }}>Кровля Севера — ваш надёжный партнёр</h3>
             <p className="font-body leading-relaxed mb-4" style={{ color: "#6b4c34" }}>
               Мы специализируемся на монтаже кровель для частных домов и коттеджей. За 15 лет работы мы выполнили более 500 проектов в Москве, Подмосковье и Центральном федеральном округе.
             </p>
@@ -766,7 +766,7 @@ export default function Index() {
             <div className="w-9 h-9 rounded-xl flex items-center justify-center" style={{ background: "var(--orange-main)" }}>
               <Icon name="Home" size={18} style={{ color: "white" }} />
             </div>
-            <span className="font-display text-xl font-bold" style={{ color: "var(--brown-dark)" }}>КровМастер</span>
+            <span className="font-display text-xl font-bold" style={{ color: "var(--brown-dark)" }}>Кровля Севера</span>
           </button>
 
           {/* Desktop */}
@@ -829,7 +829,7 @@ export default function Index() {
                 <div className="w-9 h-9 rounded-xl flex items-center justify-center" style={{ background: "var(--orange-main)" }}>
                   <Icon name="Home" size={18} style={{ color: "white" }} />
                 </div>
-                <span className="font-display text-xl font-bold text-white">КровМастер</span>
+                <span className="font-display text-xl font-bold text-white">Кровля Севера</span>
               </div>
               <p className="font-body text-sm leading-relaxed" style={{ color: "rgba(253,246,237,0.6)" }}>
                 Профессиональный монтаж кровли для частных домов. Работаем с 2008 года.
@@ -853,7 +853,7 @@ export default function Index() {
             </div>
           </div>
           <div className="pt-6 text-center font-body text-xs" style={{ borderTop: "1px solid rgba(255,255,255,0.08)", color: "rgba(253,246,237,0.35)" }}>
-            © 2024 КровМастер. Все права защищены.
+            © 2024 Кровля Севера. Все права защищены.
           </div>
         </div>
       </footer>
