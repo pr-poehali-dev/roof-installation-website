@@ -676,7 +676,13 @@ function SectionHome({
   );
 }
 
-function SectionAbout() {
+function SectionAbout({
+  showPrivacy = false,
+  onPrivacyToggle,
+}: {
+  showPrivacy?: boolean;
+  onPrivacyToggle?: (v: boolean) => void;
+}) {
   return (
     <div className="py-16 px-6" style={{ background: "var(--cream)" }}>
       <div className="container mx-auto max-w-5xl">
@@ -869,29 +875,43 @@ function SectionAbout() {
         </div>
 
         {/* Privacy Policy */}
-        <div
-          className="mt-16 rounded-2xl p-8"
-          style={{
-            background: "white",
-            border: "1px solid rgba(196,90,26,0.1)",
-            boxShadow: "0 4px 16px rgba(122,62,20,0.06)",
-          }}
-        >
-          <div className="flex items-center gap-3 mb-6">
+        <div className="mt-16">
+          <button
+            onClick={() => onPrivacyToggle?.(!showPrivacy)}
+            className="flex items-center gap-3 w-full rounded-2xl p-5 transition-all hover:opacity-80"
+            style={{
+              background: "white",
+              border: "1px solid rgba(196,90,26,0.1)",
+              boxShadow: "0 4px 16px rgba(122,62,20,0.06)",
+            }}
+          >
             <div
               className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0"
               style={{ background: "rgba(196,90,26,0.1)" }}
             >
               <Icon name="ShieldCheck" size={20} style={{ color: "var(--orange-main)" }} />
             </div>
-            <h3
-              className="font-display text-2xl font-bold"
+            <span
+              className="font-display text-lg font-bold flex-1 text-left"
               style={{ color: "var(--brown-dark)" }}
             >
               Политика конфиденциальности
-            </h3>
-          </div>
+            </span>
+            <Icon
+              name={showPrivacy ? "ChevronUp" : "ChevronDown"}
+              size={20}
+              style={{ color: "var(--orange-main)" }}
+            />
+          </button>
 
+          {showPrivacy && <div
+            className="rounded-2xl p-8 mt-2"
+            style={{
+              background: "white",
+              border: "1px solid rgba(196,90,26,0.1)",
+              boxShadow: "0 4px 16px rgba(122,62,20,0.06)",
+            }}
+          >
           <div className="space-y-5 font-body text-sm leading-relaxed" style={{ color: "#6b4c34" }}>
             <div>
               <h4 className="font-display font-semibold mb-1" style={{ color: "var(--brown-dark)" }}>1. Общие положения</h4>
@@ -938,6 +958,7 @@ function SectionAbout() {
               Последнее обновление: май 2026 г. По всем вопросам обращайтесь: krovlya.severa@gmail.com
             </p>
           </div>
+        </div>}
         </div>
       </div>
     </div>
@@ -1578,7 +1599,7 @@ const TABS = [
   { id: "calc", label: "Калькулятор" },
 ];
 
-function CookieConsent() {
+function CookieConsent({ onOpenPrivacy }: { onOpenPrivacy: () => void }) {
   const [visible, setVisible] = useState(
     () => !localStorage.getItem("pd_consent"),
   );
@@ -1607,6 +1628,7 @@ function CookieConsent() {
             Нажимая «Принять», вы соглашаетесь на обработку персональных данных
             в соответствии с{" "}
             <span
+              onClick={onOpenPrivacy}
               style={{
                 color: "#f5a461",
                 textDecoration: "underline",
@@ -1650,11 +1672,18 @@ export default function Index() {
   const [tab, setTab] = useState("home");
   const [mobileOpen, setMobileOpen] = useState(false);
   const [showForm, setShowForm] = useState(false);
+  const [showPrivacy, setShowPrivacy] = useState(false);
+
+  const handleOpenPrivacy = () => {
+    setTab("about");
+    setShowPrivacy(true);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <div style={{ minHeight: "100vh", background: "var(--cream)" }}>
       {showForm && <LeadForm onClose={() => setShowForm(false)} />}
-      <CookieConsent />
+      <CookieConsent onOpenPrivacy={handleOpenPrivacy} />
       {/* NAV */}
       <nav
         className="sticky top-0 z-50"
@@ -1755,7 +1784,7 @@ export default function Index() {
         {tab === "home" && (
           <SectionHome setTab={setTab} onOpenForm={() => setShowForm(true)} />
         )}
-        {tab === "about" && <SectionAbout />}
+        {tab === "about" && <SectionAbout showPrivacy={showPrivacy} onPrivacyToggle={setShowPrivacy} />}
         {tab === "works" && <SectionWorks />}
         {tab === "reviews" && (
           <SectionReviews onOpenForm={() => setShowForm(true)} />
