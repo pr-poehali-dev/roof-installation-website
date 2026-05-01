@@ -689,7 +689,7 @@ function SectionAbout() {
             className="font-body text-lg max-w-2xl mx-auto"
             style={{ color: "#7a5c45" }}
           >
-            Профессиональная кровельная компания с 15-летним опытом работы
+            Профессиональная кровельная компания с 5-летним опытом работы
           </p>
         </div>
 
@@ -708,7 +708,7 @@ function SectionAbout() {
                     className="font-display text-7xl font-bold"
                     style={{ color: "#f5a461" }}
                   >
-                    2008
+                    2022
                   </div>
                   <div className="font-body text-xl text-white mt-2">
                     год основания
@@ -1113,7 +1113,7 @@ function SectionReviews({ onOpenForm }: { onOpenForm: () => void }) {
           }}
         >
           <div className="font-display text-2xl font-bold text-white mb-2">
-            Доверяют более 500 семей
+            Доверяют более 100 семей
           </div>
           <p
             className="font-body mb-6"
@@ -1713,7 +1713,7 @@ export default function Index() {
                 style={{ color: "rgba(253,246,237,0.6)" }}
               >
                 Профессиональный монтаж кровли для частных домов. Работаем с
-                2008 года.
+                2022 года.
               </p>
             </div>
             <div>
@@ -1765,7 +1765,7 @@ export default function Index() {
               color: "rgba(253,246,237,0.35)",
             }}
           >
-            © 2024 Кровля Севера. Все права защищены.
+            © 2026 Кровля Севера. Все права защищены.
           </div>
         </div>
       </footer>
