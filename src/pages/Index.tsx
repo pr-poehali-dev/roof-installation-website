@@ -1692,7 +1692,7 @@ export default function Index() {
             className="flex items-center"
           >
             <img
-              src="https://cdn.poehali.dev/projects/5dda9653-ee6b-4f38-8c2f-eebc2ff4c56f/bucket/7ebd1bde-ec3a-4b72-8a3b-b86b3ac7411d.jpeg"
+              src="https://cdn.poehali.dev/projects/5dda9653-ee6b-4f38-8c2f-eebc2ff4c56f/bucket/26b87552-1f72-4f60-9a59-87e489a19b1f.png"
               alt="Кровля Севера"
               className="h-12 w-auto object-contain"
             />
