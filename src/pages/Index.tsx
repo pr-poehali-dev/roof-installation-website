@@ -838,9 +838,9 @@ export default function Index() {
             <div>
               <div className="font-display font-semibold mb-4" style={{ color: "#f5a461" }}>Контакты</div>
               <div className="space-y-2 font-body text-sm" style={{ color: "rgba(253,246,237,0.7)" }}>
-                <div className="flex items-center gap-2"><Icon name="Phone" size={14} style={{ color: "#f5a461" }} /> +7 (495) 123-45-67</div>
-                <div className="flex items-center gap-2"><Icon name="Mail" size={14} style={{ color: "#f5a461" }} /> info@krovmaster.ru</div>
-                <div className="flex items-center gap-2"><Icon name="MapPin" size={14} style={{ color: "#f5a461" }} /> Москва и Московская обл.</div>
+                <div className="flex items-center gap-2"><Icon name="Phone" size={14} style={{ color: "#f5a461" }} /> +7 (960) 007-99-05</div>
+                <div className="flex items-center gap-2"><Icon name="Mail" size={14} style={{ color: "#f5a461" }} /> krovlya.severa@gmail.com</div>
+                <div className="flex items-center gap-2"><Icon name="MapPin" size={14} style={{ color: "#f5a461" }} /> Архангельск и Архангельская область</div>
               </div>
             </div>
             <div>
