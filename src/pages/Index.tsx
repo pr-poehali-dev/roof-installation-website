@@ -242,6 +242,7 @@ const WORKS = [
     area: "120 м²",
     city: "Архангельск",
     color: "#c45a1a",
+    img: "https://cdn.poehali.dev/projects/5dda9653-ee6b-4f38-8c2f-eebc2ff4c56f/files/4832df8f-f87a-4c6c-92da-0fd89d987160.jpg",
   },
   {
     id: 2,
@@ -249,6 +250,7 @@ const WORKS = [
     area: "150 м²",
     city: "Северодвинск",
     color: "#7a3e14",
+    img: "https://cdn.poehali.dev/projects/5dda9653-ee6b-4f38-8c2f-eebc2ff4c56f/files/7bcd5d69-4222-4220-bf20-6923dc409a5f.jpg",
   },
   {
     id: 3,
@@ -256,6 +258,7 @@ const WORKS = [
     area: "120 м²",
     city: "Архангельская обл.",
     color: "#e8813a",
+    img: "https://cdn.poehali.dev/projects/5dda9653-ee6b-4f38-8c2f-eebc2ff4c56f/files/d56072a9-7f55-4bb2-b0c7-1f5dd0bd272b.jpg",
   },
   {
     id: 4,
@@ -263,6 +266,7 @@ const WORKS = [
     area: "65 м²",
     city: "Архангельская обл.",
     color: "#3d2008",
+    img: "https://cdn.poehali.dev/projects/5dda9653-ee6b-4f38-8c2f-eebc2ff4c56f/files/c2311a86-d2d6-4fd1-919b-9b7933eccb8d.jpg",
   },
   {
     id: 5,
@@ -270,6 +274,7 @@ const WORKS = [
     area: "180 м²",
     city: "Архангельская обл.",
     color: "#c45a1a",
+    img: "https://cdn.poehali.dev/projects/5dda9653-ee6b-4f38-8c2f-eebc2ff4c56f/files/e1c72fc8-c7fb-4235-8db5-aa767be08b3b.jpg",
   },
   {
     id: 6,
@@ -277,6 +282,7 @@ const WORKS = [
     area: "340 м²",
     city: "пос. Пухтаковка",
     color: "#7a3e14",
+    img: "https://cdn.poehali.dev/projects/5dda9653-ee6b-4f38-8c2f-eebc2ff4c56f/files/f78e0645-dd2d-485c-a35c-650b9d8bd09a.jpg",
   },
 ];
 
@@ -979,22 +985,22 @@ function SectionWorks() {
                 boxShadow: "0 4px 16px rgba(122,62,20,0.06)",
               }}
             >
-              <div
-                className="h-44 flex items-center justify-center relative overflow-hidden"
-                style={{
-                  background: `linear-gradient(135deg, ${w.color}dd, ${w.color}88)`,
-                }}
-              >
-                <div className="absolute inset-0 tile-pattern" />
-                <div className="relative text-center">
-                  <Icon
-                    name="Home"
-                    size={48}
-                    style={{ color: "rgba(255,255,255,0.9)" }}
-                  />
-                  <div className="font-display text-2xl font-bold text-white mt-2">
+              <div className="h-52 relative overflow-hidden">
+                <img
+                  src={w.img}
+                  alt={w.title}
+                  className="w-full h-full object-cover"
+                />
+                <div
+                  className="absolute bottom-0 left-0 right-0 px-4 py-2 flex items-center justify-end"
+                  style={{ background: "linear-gradient(to top, rgba(61,32,8,0.75), transparent)" }}
+                >
+                  <span
+                    className="font-display text-sm font-bold text-white px-2 py-0.5 rounded-lg"
+                    style={{ background: "rgba(196,90,26,0.7)" }}
+                  >
                     {w.area}
-                  </div>
+                  </span>
                 </div>
               </div>
               <div className="p-5">
