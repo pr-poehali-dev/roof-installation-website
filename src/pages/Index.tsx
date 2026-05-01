@@ -519,8 +519,8 @@ function SectionHome({
           <div className="container mx-auto px-6">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
               {[
-                ["15+", "лет опыта"],
-                ["500+", "объектов"],
+                ["5+", "лет опыта"],
+                ["100+", "объектов"],
                 ["10 лет", "гарантия"],
                 ["24ч", "выезд на замер"],
               ].map(([num, label]) => (
