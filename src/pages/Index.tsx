@@ -466,7 +466,7 @@ function SectionHome({
                   color: "#f5a461",
                 }}
               >
-                Монтаж кровли с 2025 года
+                Монтаж кровли с 2022 года
               </span>
             </div>
             <h1 className="font-display text-5xl md:text-7xl font-bold text-white mb-6 leading-tight animate-fade-up-delay-2">
@@ -493,6 +493,7 @@ function SectionHome({
               >
                 Рассчитать стоимость
               </button>
+              /*
               <button
                 onClick={() => setTab("works")}
                 className="px-8 py-4 rounded-xl font-display font-semibold text-lg transition-all hover:scale-105"
@@ -504,6 +505,7 @@ function SectionHome({
               >
                 Наши работы
               </button>
+              */
             </div>
           </div>
         </div>
@@ -708,7 +710,7 @@ function SectionAbout() {
                     className="font-display text-7xl font-bold"
                     style={{ color: "#f5a461" }}
                   >
-                    2025
+                    2022
                   </div>
                   <div className="font-body text-xl text-white mt-2">
                     год основания
@@ -1713,7 +1715,7 @@ export default function Index() {
                 style={{ color: "rgba(253,246,237,0.6)" }}
               >
                 Профессиональный монтаж кровли для частных домов. Работаем с
-                2025 года.
+                2022 года.
               </p>
             </div>
             <div>
