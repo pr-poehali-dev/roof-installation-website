@@ -466,7 +466,7 @@ function SectionHome({
                   color: "#f5a461",
                 }}
               >
-                Монтаж кровли с 2022 года
+                Монтаж кровли с 2025 года
               </span>
             </div>
             <h1 className="font-display text-5xl md:text-7xl font-bold text-white mb-6 leading-tight animate-fade-up-delay-2">
@@ -708,7 +708,7 @@ function SectionAbout() {
                     className="font-display text-7xl font-bold"
                     style={{ color: "#f5a461" }}
                   >
-                    2022
+                    2025
                   </div>
                   <div className="font-body text-xl text-white mt-2">
                     год основания
@@ -1713,7 +1713,7 @@ export default function Index() {
                 style={{ color: "rgba(253,246,237,0.6)" }}
               >
                 Профессиональный монтаж кровли для частных домов. Работаем с
-                2022 года.
+                2025 года.
               </p>
             </div>
             <div>
