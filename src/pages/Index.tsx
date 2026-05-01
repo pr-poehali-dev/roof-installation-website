@@ -1223,6 +1223,100 @@ function SectionReviews({ onOpenForm }: { onOpenForm: () => void }) {
   );
 }
 
+const FAQ_ITEMS = [
+  {
+    q: "Как быстро вы приедете на замер?",
+    a: "Выезд на замер осуществляется бесплатно в течение 1–2 рабочих дней после вашего обращения. После замера готовим точную смету в течение 24 часов.",
+  },
+  {
+    q: "Какие материалы вы используете?",
+    a: "Работаем с металлочерепицей, профнастилом, мягкой кровлей (битумная черепица), фальцевой кровлей и керамической черепицей. Используем только проверенных производителей с сертификатами качества.",
+  },
+  {
+    q: "Сколько времени займёт монтаж кровли?",
+    a: "Сроки зависят от площади и сложности кровли. Стандартный частный дом 100–150 м² — от 3 до 7 рабочих дней. Точные сроки указываем в договоре и соблюдаем их.",
+  },
+  {
+    q: "Какую гарантию вы даёте на работу?",
+    a: "Даём письменную гарантию на монтажные работы — 5 лет. Гарантия производителя на материалы составляет от 10 до 50 лет в зависимости от типа покрытия.",
+  },
+  {
+    q: "Работаете ли вы в зимнее время?",
+    a: "Да, выполняем монтаж круглый год. Большинство кровельных материалов монтируются при температуре до -15°C. Мягкая кровля укладывается только при плюсовой температуре.",
+  },
+  {
+    q: "Можно ли заменить только часть кровли?",
+    a: "Да, делаем частичный ремонт и замену. Перед началом работ проводим диагностику всей кровли, чтобы выявить скрытые проблемы и предотвратить повторные протечки.",
+  },
+  {
+    q: "Включает ли цена вывоз старых материалов?",
+    a: "Демонтаж старой кровли и вывоз строительного мусора входят в стоимость работ. После завершения объект сдаётся в чистом виде.",
+  },
+  {
+    q: "Как происходит оплата?",
+    a: "Работаем по договору: 30% предоплата при подписании, остаток — после приёмки выполненных работ. Принимаем наличные и безналичный расчёт.",
+  },
+];
+
+function FaqSection() {
+  const [open, setOpen] = useState<number | null>(null);
+  return (
+    <div className="mt-10">
+      <h3
+        className="font-display text-2xl font-bold mb-6"
+        style={{ color: "var(--brown-dark)" }}
+      >
+        Популярные вопросы
+      </h3>
+      <div className="flex flex-col gap-3">
+        {FAQ_ITEMS.map((item, i) => (
+          <div
+            key={i}
+            className="rounded-2xl overflow-hidden"
+            style={{
+              border: "1.5px solid rgba(196,90,26,0.15)",
+              background: "var(--warm-white)",
+            }}
+          >
+            <button
+              className="w-full flex items-center justify-between px-6 py-4 text-left gap-4"
+              onClick={() => setOpen(open === i ? null : i)}
+            >
+              <span
+                className="font-body font-semibold text-base"
+                style={{ color: "var(--brown-dark)" }}
+              >
+                {item.q}
+              </span>
+              <span
+                className="flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center transition-transform"
+                style={{
+                  background: open === i ? "var(--orange-main)" : "rgba(196,90,26,0.1)",
+                  transform: open === i ? "rotate(45deg)" : "rotate(0deg)",
+                }}
+              >
+                <Icon
+                  name="Plus"
+                  size={16}
+                  style={{ color: open === i ? "white" : "var(--orange-main)" }}
+                />
+              </span>
+            </button>
+            {open === i && (
+              <div
+                className="px-6 pb-5 font-body text-sm leading-relaxed"
+                style={{ color: "var(--brown-mid)" }}
+              >
+                {item.a}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function SectionCalc({ onOpenForm }: { onOpenForm: () => void }) {
   const [area, setArea] = useState(100);
   const [roofType, setRoofType] = useState("dvuskat");
@@ -1577,6 +1671,9 @@ function SectionCalc({ onOpenForm }: { onOpenForm: () => void }) {
             </div>
           </div>
         </div>
+      </div>
+      <div className="container mx-auto px-6 pb-16">
+        <FaqSection />
       </div>
     </div>
   );
