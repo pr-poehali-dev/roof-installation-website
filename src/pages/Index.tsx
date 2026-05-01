@@ -751,6 +751,55 @@ const TABS = [
   { id: "calc", label: "Калькулятор" },
 ];
 
+function CookieConsent() {
+  const [visible, setVisible] = useState(() => !localStorage.getItem("pd_consent"));
+
+  if (!visible) return null;
+
+  return (
+    <div
+      className="fixed bottom-0 left-0 right-0 z-[200] px-4 pb-4"
+      style={{ pointerEvents: "none" }}
+    >
+      <div
+        className="container mx-auto max-w-3xl rounded-2xl px-6 py-5 flex flex-col md:flex-row items-start md:items-center gap-4"
+        style={{
+          background: "var(--brown-dark)",
+          boxShadow: "0 -4px 40px rgba(61,32,8,0.35)",
+          border: "1px solid rgba(232,129,58,0.2)",
+          pointerEvents: "all",
+        }}
+      >
+        <div className="flex-1">
+          <p className="font-body text-sm leading-relaxed" style={{ color: "rgba(253,246,237,0.85)" }}>
+            Нажимая «Принять», вы соглашаетесь на обработку персональных данных в соответствии с{" "}
+            <span style={{ color: "#f5a461", textDecoration: "underline", cursor: "pointer" }}>
+              политикой конфиденциальности
+            </span>
+            . Мы используем данные только для связи с вами по вашему запросу.
+          </p>
+        </div>
+        <div className="flex gap-3 flex-shrink-0">
+          <button
+            onClick={() => { localStorage.setItem("pd_consent", "1"); setVisible(false); }}
+            className="px-5 py-2.5 rounded-xl font-display font-semibold text-sm transition-all hover:scale-105"
+            style={{ background: "var(--orange-main)", color: "white" }}
+          >
+            Принять
+          </button>
+          <button
+            onClick={() => setVisible(false)}
+            className="px-5 py-2.5 rounded-xl font-display font-semibold text-sm transition-all hover:opacity-70"
+            style={{ background: "rgba(255,255,255,0.08)", color: "rgba(253,246,237,0.7)", border: "1px solid rgba(255,255,255,0.12)" }}
+          >
+            Закрыть
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Index() {
   const [tab, setTab] = useState("home");
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -759,6 +808,7 @@ export default function Index() {
   return (
     <div style={{ minHeight: "100vh", background: "var(--cream)" }}>
       {showForm && <LeadForm onClose={() => setShowForm(false)} />}
+      <CookieConsent />
       {/* NAV */}
       <nav className="sticky top-0 z-50" style={{ background: "rgba(253,246,237,0.95)", backdropFilter: "blur(12px)", borderBottom: "1px solid rgba(196,90,26,0.12)" }}>
         <div className="container mx-auto px-6 py-4 flex items-center justify-between">
