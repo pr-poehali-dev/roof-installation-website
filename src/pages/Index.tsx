@@ -1787,12 +1787,11 @@ export default function Index() {
           <div className="grid md:grid-cols-3 gap-10 mb-10">
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <div
-                  className="w-9 h-9 rounded-xl flex items-center justify-center"
-                  style={{ background: "var(--orange-main)" }}
-                >
-                  <Icon name="Home" size={18} style={{ color: "white" }} />
-                </div>
+                <img
+                  src="https://cdn.poehali.dev/projects/5dda9653-ee6b-4f38-8c2f-eebc2ff4c56f/bucket/26b87552-1f72-4f60-9a59-87e489a19b1f.png"
+                  alt="Кровля Севера"
+                  className="h-12 w-auto object-contain"
+                />
                 <span className="font-display text-xl font-bold text-white">
                   Кровля Севера
                 </span>
