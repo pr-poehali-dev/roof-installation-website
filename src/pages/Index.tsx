@@ -1045,11 +1045,11 @@ function SectionReviews({ onOpenForm }: { onOpenForm: () => void }) {
               className="font-display text-2xl font-bold"
               style={{ color: "var(--orange-main)" }}
             >
-              5.0
+              4.8
             </span>
           </div>
           <p className="font-body" style={{ color: "#7a5c45" }}>
-            На основе 127 отзывов
+            На основе 37 отзывов
           </p>
         </div>
 
