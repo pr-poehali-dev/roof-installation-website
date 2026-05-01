@@ -493,7 +493,7 @@ function SectionHome({
               >
                 Рассчитать стоимость
               </button>
-              /*
+
               <button
                 onClick={() => setTab("works")}
                 className="px-8 py-4 rounded-xl font-display font-semibold text-lg transition-all hover:scale-105"
@@ -505,7 +505,6 @@ function SectionHome({
               >
                 Наши работы
               </button>
-              */
             </div>
           </div>
         </div>
